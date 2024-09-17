@@ -1,14 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
 android {
-    namespace = "ifgoiano.urt.cerveja"
-    compileSdk = 35
+    namespace = "ifgoiano.urt.enviamensagem"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "ifgoiano.urt.cerveja"
+        applicationId = "ifgoiano.urt.enviamensagem"
         minSdk = 28
         targetSdk = 34
         versionCode = 1
