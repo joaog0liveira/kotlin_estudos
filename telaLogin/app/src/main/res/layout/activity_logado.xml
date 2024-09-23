@@ -8,12 +8,11 @@
     tools:context=".LogadoActivity">
 
     <TextView
-        android:id="@+id/result"
-        android:layout_width="210dp"
-        android:layout_height="130dp"
-        android:gravity="center"
-        android:text="LOGADO COM SUCESSO"
-        android:textSize="34sp"
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bem-vindo!"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

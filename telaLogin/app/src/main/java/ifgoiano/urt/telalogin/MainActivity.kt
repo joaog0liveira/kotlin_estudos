@@ -12,8 +12,6 @@ import ifgoiano.urt.telalogin.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val emailTeste = "teste"
-    private val senhaTeste = "120103"
 
     private lateinit var binding: ActivityMainBinding
 
@@ -33,8 +31,13 @@ class MainActivity : AppCompatActivity() {
             val email = binding.emailText.text.toString()
             val senha = binding.senhaText.text.toString()
 
-            if (emailTeste == email && senhaTeste == senha) {
+            if (email == "teste" && senha == "120103") {
+
+                val bundle = Bundle()
+                bundle.putString("username", email)
+
                 val intent = Intent(this, LogadoActivity::class.java)
+                intent.putExtras(bundle)
                 startActivity(intent)
             } else {
                 alert("Login e senha incorretos")
@@ -43,6 +46,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun alert(s: String) {
-        Toast.makeText(this, s, Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Usuário ou senha incorretos", Toast.LENGTH_SHORT).show()
+        binding.emailText.text.clear()
+        binding.senhaText.text.clear()
     }
 }
