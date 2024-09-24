@@ -25,14 +25,11 @@ class oBuscarCervejaActivity : AppCompatActivity() {
             insets
         }
 
-        //referenciar o spinner e textview
         val spinnerCerveja: Spinner = findViewById(R.id.spinnerCerveja)
         val textViewMarcas: TextView = findViewById(R.id.textViewMarcas)
 
-        // carregar os tipos de cerveja
         val tipoDeCerveja = resources.getStringArray(R.array.tipos_cerveja)
 
-        // criando adapter para o spinner
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_item,
@@ -44,10 +41,8 @@ class oBuscarCervejaActivity : AppCompatActivity() {
         spinnerCerveja.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
 
-                // busca o tipo de cerveja selecionado
                 val tipoSelecionado = parent.getItemAtPosition(position).toString()
 
-                // busca as marcas
                 val marcas = expertCerveja.getMarcas(tipoSelecionado)
 
                 textViewMarcas.text = marcas.joinToString(", ")
