@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickStart(view: View) {
         execucao = true
+        runTimer()
     }
 
     fun onClickStop(view: View) {
@@ -70,4 +72,24 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+
+    // teste de thread dentro de thread
+
+//    private fun runTimer() {
+//        Thread {
+//            while (execucao) {
+//                Thread.sleep(1000)
+//                seconds++
+//
+//                runOnUiThread {
+//                    val hours = seconds / 3600
+//                    val minutes = (seconds % 3600) / 60
+//                    val secs = seconds % 60
+//                    val time = String.format("%d:%02d:%02d", hours, minutes, secs)
+//                    binding.timerText.text = time
+//                }
+//            }
+//        }.start()
+//    }
 }
