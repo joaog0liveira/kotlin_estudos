@@ -18,12 +18,20 @@ class MainActivity : AppCompatActivity() {
     private var handler = Handler(Looper.getMainLooper())
     private var seconds = 0
     private var execucao = false
+    private var estavaEmExecucao = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if (savedInstanceState != null) {
+            seconds = savedInstanceState.getInt("seconds")
+            execucao = savedInstanceState.getBoolean("execucao")
+//            execucao = true
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -36,7 +44,6 @@ class MainActivity : AppCompatActivity() {
 
     fun onClickStart(view: View) {
         execucao = true
-        runTimer()
     }
 
     fun onClickStop(view: View) {
@@ -53,6 +60,42 @@ class MainActivity : AppCompatActivity() {
 
         binding.timerText.text = String.format("%d:%02d:%02d", hours, minutes, secs)
     }
+
+    override fun onPause() {
+        super.onPause()
+        estavaEmExecucao = execucao
+        execucao = false
+    }
+    override fun onStop() {
+        super.onStop()
+        estavaEmExecucao = execucao
+        execucao = false
+    }
+
+//    override fun onRestart() {
+//        super.onRestart()
+//    }
+
+    override fun onStart() {
+        super.onStart()
+        if (estavaEmExecucao) {
+            execucao = true
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (estavaEmExecucao) {
+            execucao = true
+        }
+    }
+
+    override fun onSaveInstanceState(savedInstanceState: Bundle) {
+        super.onSaveInstanceState(savedInstanceState)
+        savedInstanceState.putInt("seconds", seconds)
+        savedInstanceState.putBoolean("execucao", execucao)
+    }
+
 
     fun runTimer() {
         handler.post(object : Runnable {
@@ -74,7 +117,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    // teste de thread dentro de thread
+}
+
+
+
+// teste de thread dentro de thread
 
 //    private fun runTimer() {
 //        Thread {
@@ -92,4 +139,4 @@ class MainActivity : AppCompatActivity() {
 //            }
 //        }.start()
 //    }
-}
+
