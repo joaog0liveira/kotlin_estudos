@@ -1,6 +1,7 @@
 package ifgoiano.urt.stopwatch
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.ArrayAdapter
@@ -11,7 +12,7 @@ import ifgoiano.urt.stopwatch.databinding.ActivityTempBinding
 class TempActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityTempBinding
-    private var countdownTimer: CountDownTimer? = null
+    private var temporizador: CountDownTimer? = null
     private var tempoSobrando: Long = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,13 +45,18 @@ class TempActivity : AppCompatActivity() {
             resetTimer()
         }
 
+        binding.menuButton.setOnClickListener{
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+        }
+
         updateTimerText()
     }
 
     private fun startTimer() {
-        countdownTimer?.cancel()
+        temporizador?.cancel()
 
-        countdownTimer = object : CountDownTimer(tempoSobrando, 1000) {
+        temporizador = object : CountDownTimer(tempoSobrando, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 tempoSobrando = millisUntilFinished
                 updateTimerText()
@@ -63,7 +69,7 @@ class TempActivity : AppCompatActivity() {
     }
 
     private fun resetTimer() {
-        countdownTimer?.cancel()
+        temporizador?.cancel()
         tempoSobrando = 0
         updateTimerText()
     }
@@ -78,7 +84,7 @@ class TempActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        countdownTimer?.cancel()
+        temporizador?.cancel()
     }
 }
 

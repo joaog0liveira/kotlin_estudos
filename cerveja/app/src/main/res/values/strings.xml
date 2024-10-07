@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">cerveja</string>
     <string name="selected_item"> Item Selecionado: </string>
+    <string name="result">TextView</string>
+    <string name="cerveja">Cervejas</string>
 
     <string-array name="tipos_cerveja">
         <item>Pilsen</item>

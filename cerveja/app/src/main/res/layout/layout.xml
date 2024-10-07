@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testLinear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#646464"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/cervejaText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:background="#00FFFFFF"
+        android:text="@string/cerveja"
+        android:textAlignment="center"
+        android:textColor="#E60000"
+        android:textSize="48sp"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerCerveja"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#0B0A0A"
+        android:backgroundTint="#15FFFFFF"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/textViewMarcas"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="100dp"
+        android:layout_weight="3"
+        android:text="@string/result"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="24sp" />
+
+</LinearLayout>
