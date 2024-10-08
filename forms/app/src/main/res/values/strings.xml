@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">forms</string>
+    <string name="secao_eleitoral">Seção Eleitoral</string>
+    <string name="zona_eleitoral">Zona Eleitoral</string>
+    <string name="titulo_de_eleitor">Titulo de Eleitor</string>
+    <string name="nome_completo">Nome Completo</string>
+    <string name="enviar">Enviar</string>
+    <string name="partido_3">Partido 3</string>
+    <string name="partido_2">Partido 2</string>
+    <string name="partido_1">Partido 1</string>
+    <string name="selecao_partido">Selecione o Partido que você mais gosta:</string>
+    <string name="cidade">Cidade</string>
+
+    <string-array name="estados">
+        <item>Goiás</item>
+        <item>Rio de Janeiro</item>
+        <item>São Paulo</item>
+    </string-array>
+
+    <string-array name="candidatos_goias">
+        <item>Candidato GO 1</item>
+        <item>Candidato GO 2</item>
+        <item>Candidato GO 3</item>
+        <item>Candidato GO 4</item>
+    </string-array>
+
+    <string-array name="candidatos_rio">
+        <item>Candidato RJ 1</item>
+        <item>Candidato RJ 2</item>
+        <item>Candidato RJ 3</item>
+        <item>Candidato RJ 4</item>
+    </string-array>
+
+    <string-array name="candidatos_sp">
+        <item>Candidato SP 1</item>
+        <item>Candidato SP 2</item>
+        <item>Candidato SP 3</item>
+        <item>Candidato SP 4</item>
+    </string-array>
+</resources>
