@@ -5,11 +5,16 @@
     <string name="titulo_de_eleitor">Titulo de Eleitor</string>
     <string name="nome_completo">Nome Completo</string>
     <string name="enviar">Enviar</string>
-    <string name="partido_3">Partido 3</string>
-    <string name="partido_2">Partido 2</string>
-    <string name="partido_1">Partido 1</string>
+    <string name="partido_3">PT</string>
+    <string name="partido_2">PMDB</string>
+    <string name="partido_1">PL</string>
     <string name="selecao_partido">Selecione o Partido que você mais gosta:</string>
     <string name="cidade">Cidade</string>
+    <string name="estadoText">Selecione seu estado</string>
+    <string name="selecione_seu_prefeito_a">Selecione seu Prefeito(a)</string>
+    <string name="selecione_seu_prefeito">Selecione seu Prefeito(a):</string>
+    <string name="selecione_seu_vereador_a">Selecione seu vereador(a):</string>
+    <string name="fechar_pesquisa">Fechar Pesquisa</string>
 
     <string-array name="estados">
         <item>Goiás</item>
@@ -18,23 +23,47 @@
     </string-array>
 
     <string-array name="candidatos_goias">
-        <item>Candidato GO 1</item>
-        <item>Candidato GO 2</item>
-        <item>Candidato GO 3</item>
-        <item>Candidato GO 4</item>
+        <item>Flavio</item>
+        <item>Jose</item>
+        <item>Diego</item>
+        <item>Italo</item>
     </string-array>
 
     <string-array name="candidatos_rio">
-        <item>Candidato RJ 1</item>
-        <item>Candidato RJ 2</item>
-        <item>Candidato RJ 3</item>
-        <item>Candidato RJ 4</item>
+        <item>Maria</item>
+        <item>Fernanda</item>
+        <item>Denise</item>
+        <item>Joana</item>
     </string-array>
 
     <string-array name="candidatos_sp">
-        <item>Candidato SP 1</item>
-        <item>Candidato SP 2</item>
-        <item>Candidato SP 3</item>
-        <item>Candidato SP 4</item>
+        <item>Zezim</item>
+        <item>Cumpadi</item>
+        <item>Tiao</item>
+        <item>Toin</item>
     </string-array>
+
+
+    <!-- Vereadores -->
+    <string-array name="vereador_go">
+        <item>Zezin do Disc</item>
+        <item>Tiao Roxo</item>
+        <item>Cearense do Bar</item>
+        <item>Julio Barbeiro</item>
+    </string-array>
+
+    <string-array name="vereador_rio">
+        <item>Matheus do Trem</item>
+        <item>Fernandão</item>
+        <item>Gabriel do Milho</item>
+        <item>Pedro Salva-Vidas</item>
+    </string-array>
+
+    <string-array name="vereador_sp">
+        <item>Pablo Datena</item>
+        <item>Zé Gotinha</item>
+        <item>Baiano da Soneca</item>
+        <item>Antonio Bicudo</item>
+    </string-array>
+
 </resources>

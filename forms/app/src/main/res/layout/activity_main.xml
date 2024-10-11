@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
     android:padding="16dp"
     tools:context=".MainActivity">
 
+
+    <!-- Nome -->
     <ImageView
+        android:layout_marginTop="20dp"
         android:id="@+id/imageTRE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="95dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:layout_gravity="center"
         android:src="@drawable/tre_image" />
 
-
-    <!-- Nome -->
     <EditText
         android:id="@+id/nomeCompleto"
+        android:layout_below="@+id/imageTRE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nome_completo" />
@@ -30,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/titulo_de_eleitor"
+        android:layout_below="@+id/nomeCompleto"
         android:inputType="number" />
 
     <!-- Zona -->
@@ -37,6 +44,7 @@
         android:id="@+id/zona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/tituloEleitor"
         android:hint="@string/zona_eleitoral" />
 
     <!-- Seção -->
@@ -44,32 +52,79 @@
         android:id="@+id/secao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/zona"
         android:hint="@string/secao_eleitoral" />
 
-    <!-- Seção -->
-    <EditText
-        android:id="@+id/cidade"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/estadoText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="@string/cidade" />
+        android:layout_below="@+id/secao"
+        android:paddingTop="5dp"
+        android:text="@string/estadoText" />
+
 
     <!-- Spinner Estados-->
     <Spinner
         android:id="@+id/spinnerEstados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/estadoText"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
         android:entries="@array/estados" />
+
+    <!-- Cidade -->
+    <EditText
+        android:id="@+id/cidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:layout_below="@+id/spinnerEstados"
+        android:hint="@string/cidade" />
+
+    <TextView
+        android:id="@+id/prefeitoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cidade"
+        android:paddingTop="5dp"
+        android:text="@string/selecione_seu_prefeito" />
 
     <!-- Spinner Prefeitos-->
     <Spinner
         android:id="@+id/spinnerPrefeitos"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_below="@+id/prefeitoText"/>
+
+    <TextView
+        android:id="@+id/vereadoresText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerPrefeitos"
+        android:paddingTop="5dp"
+        android:text="@string/selecione_seu_vereador_a" />
+
+    <!-- Spinner Vereadores-->
+    <Spinner
+        android:id="@+id/spinnerVereadores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="16dp"
+        android:layout_below="@+id/vereadoresText"/>
+
 
     <!-- Seleção de Partido -->
     <TextView
+        android:id="@+id/partido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerVereadores"
+        android:paddingTop="15dp"
         android:text="@string/selecao_partido" />
 
     <CheckBox
@@ -77,12 +132,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="false"
+        android:layout_below="@+id/partido"
         android:text="@string/partido_1" />
+
 
     <CheckBox
         android:id="@+id/partido2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/partido"
+        android:layout_alignEnd="@+id/partido1"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="-114dp"
         android:checked="false"
         android:text="@string/partido_2" />
 
@@ -90,12 +152,19 @@
         android:id="@+id/partido3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/partido"
+        android:layout_alignEnd="@+id/partido2"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="-114dp"
         android:checked="false"
         android:text="@string/partido_3" />
 
     <Button
         android:id="@+id/btnConcluir"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/partido2"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:text="@string/enviar" />
-</LinearLayout>
+</RelativeLayout>

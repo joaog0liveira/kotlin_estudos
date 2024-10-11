@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageTRE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="95dp"
         android:layout_gravity="center"
         android:src="@drawable/tre_image" />
 
@@ -20,6 +20,15 @@
     <TextView
         android:id="@+id/resultado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="248dp"
+        android:layout_marginTop="45dp"
         android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/buttonFechar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fechar_pesquisa"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"/>
 </LinearLayout>
