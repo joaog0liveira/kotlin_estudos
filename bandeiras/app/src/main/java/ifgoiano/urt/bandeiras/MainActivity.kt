@@ -30,10 +30,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Configura o RecyclerView
+        val recyclerView = binding.recyclerView
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
-        binding.recyclerView.itemAnimator = DefaultItemAnimator()
-        binding.recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.setHasFixedSize(true)
 
         // Obtenha a lista de bandeiras
         bandeiras = BandeirasData.getBandeiras()

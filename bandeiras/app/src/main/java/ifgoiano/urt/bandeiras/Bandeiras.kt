@@ -13,7 +13,6 @@ object BandeirasData {
             Bandeiras("Ceara", R.drawable.ceara),
             Bandeiras("Distrito Federal", R.drawable.distrito),
             Bandeiras("Espirito Santo", R.drawable.espiritosanto)
-
             )
     }
 }
