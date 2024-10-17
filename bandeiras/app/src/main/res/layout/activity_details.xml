@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <ImageView
+        android:id="@+id/imgBandeira"
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:contentDescription="Bandeira"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        android:scaleType="centerInside"/>
+
+    <TextView
+        android:id="@+id/nomeEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Estado"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/imgBandeira"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/capitalEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capital"
+        app:layout_constraintTop_toBottomOf="@id/nomeEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/populacaoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="População"
+        app:layout_constraintTop_toBottomOf="@id/capitalEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/regiaoEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Região"
+        app:layout_constraintTop_toBottomOf="@id/populacaoEstado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="228dp"
+        android:text="Voltar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/regiaoEstado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

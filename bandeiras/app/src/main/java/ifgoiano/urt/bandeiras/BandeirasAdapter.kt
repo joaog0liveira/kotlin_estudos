@@ -1,6 +1,7 @@
 package ifgoiano.urt.bandeiras
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,21 +33,26 @@ class BandeirasAdapter(
 
     override fun getItemCount(): Int = bandeiras!!.size
 
-    override fun onBindViewHolder(holder: BandeirasViewHolder,
-                                  position: Int) {
+    override fun onBindViewHolder(holder: BandeirasViewHolder, position: Int) {
         val bandeiras = bandeiras!![position]
         holder.tNome.text = bandeiras.nome
         holder.img.setImageResource(bandeiras.img)
-        // Clique no item
+
         holder.itemView.setOnClickListener {
-            onClickListener.onClickBandeiras(holder, position)
+            val intent = Intent(context, DetailsActivity::class.java)
+            intent.putExtra("nome", bandeiras.nome)
+            intent.putExtra("capital", bandeiras.capital)
+            intent.putExtra("populacao", bandeiras.populacao)
+            intent.putExtra("regiao", bandeiras.regiao)
+            intent.putExtra("img", bandeiras.img)
+            context.startActivity(intent)
         }
     }
 
     class BandeirasViewHolder(view: View): RecyclerView.ViewHolder(view)
     {
-        var tNome: TextView = view.findViewById(R.id.tNome)
-        var img: ImageView = view.findViewById(R.id.img)
+        var tNome: TextView = view.findViewById(R.id.nomeEstado)
+        var img: ImageView = view.findViewById(R.id.imgBandeira)
     }
 
 }

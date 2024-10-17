@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var recyclerView: RecyclerView
     private var bandeiras: List<Bandeiras>? = emptyList()
     private lateinit var adapter: BandeirasAdapter
 
