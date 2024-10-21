@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">firebase</string>
+    <string name="exibe_registro">Exibe Registro</string>
+    <string name="nome_da_capital">Nome da Capital</string>
+    <string name="nome_do_pais">Nome do Pais</string>
+    <string name="criar">Criar</string>
+    <string name="excluir">Excluir</string>
+    <string name="atualizar">Atualizar</string>
+    <string name="ler">Ler</string>
+</resources>
