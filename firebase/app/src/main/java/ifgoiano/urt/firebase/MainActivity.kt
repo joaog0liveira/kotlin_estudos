@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                             putExtra("pais", c.pais)
                             putExtra("sigla", c.sigla)
                         }
+                        startActivity(intent)
 
                     }
                 } else {

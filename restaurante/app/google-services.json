@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "363849509999",
+    "project_id": "primeiro-firebase-project",
+    "storage_bucket": "primeiro-firebase-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363849509999:android:6e607b55b79ebc0206b19a",
+        "android_client_info": {
+          "package_name": "ifgoiano.urt.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCua0R4gt9XrBOy9gJO7qQQkXu2vq9aYOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363849509999:android:6643ba3e6b98766e06b19a",
+        "android_client_info": {
+          "package_name": "ifgoiano.urt.restaurante"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCua0R4gt9XrBOy9gJO7qQQkXu2vq9aYOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
