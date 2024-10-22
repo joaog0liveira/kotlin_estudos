@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         fab = findViewById(R.id.fab)
         recyclerView = findViewById(R.id.recyclerView)
 
-        adapter = RestauranteAdapter(resturantes) { resturantes ->
+        adapter = RestauranteAdapter(restaurantes) { resturantes ->
             atualizaRestaurantes(resturantes)
         }
         recyclerView.adapter = adapter
