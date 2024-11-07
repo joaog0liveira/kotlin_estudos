@@ -7,7 +7,7 @@ object BandeirasData {
         return listOf(
             Bandeiras("Acre", R.drawable.acre, "Rio Branco", "881.935", "Norte"),
             Bandeiras("Alagoas", R.drawable.alagoas, "Maceió", "3.351.543", "Nordeste"),
-            Bandeiras("Amapá", R.drawable.amapa, "Macapá", "845.731", "Norte"),
+            Bandeiras("Amapá", R.drawable.amapa, "Macapá", "845.73re1", "Norte"),
             Bandeiras("Amazonas", R.drawable.amazonas, "Manaus", "4.207.714", "Norte"),
             Bandeiras("Bahia", R.drawable.bahia, "Salvador", "14.873.064", "Nordeste"),
             Bandeiras("Ceará", R.drawable.ceara, "Fortaleza", "9.132.078", "Nordeste"),
