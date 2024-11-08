@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="30dp"
+    android:paddingBottom="16dp"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Imagem no topo esquerdo"
+            android:src="@drawable/goias" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:layout_marginLeft="41dp"
+            android:text="Nota Fiscal Goiana"
+            android:textColor="#0699AB"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="8dp"
+            android:text="CPF:"
+            android:textColor="#052A9B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="000.000.000-00"
+        android:paddingBottom="8dp"
+        android:textColor="#052A9B"
+        android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Banco:"
+        android:textColor="#052A9B"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_banco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/bancos"
+        android:hint="Escolha seu banco"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Tipo de Conta:"
+        android:textColor="#052A9B"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/spinner_tipo_conta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/tipos_conta"
+        android:hint="Escolha o tipo de conta"
+        android:layout_marginTop="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/et_agencia"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColorHint="#052A9B"
+            android:textStyle="bold"
+            android:hint="Agência"/>
+
+        <EditText
+            android:id="@+id/et_digito_agencia"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColorHint="#052A9B"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:hint="Dígito"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/et_conta"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColorHint="#052A9B"
+            android:textStyle="bold"
+            android:hint="Conta"/>
+
+        <EditText
+            android:id="@+id/et_digito_conta"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColorHint="#052A9B"
+            android:textStyle="bold"
+            android:hint="Dígito"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Valor:"
+        android:layout_gravity="center"
+        android:paddingBottom="8dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#052A9B"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <Button
+        android:id="@+id/btn_solicitar_saque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SOLICITAR SAQUE"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_resumo"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="250dp"
+        android:background="#C3C3C3"
+        android:textColorHint="@color/black"
+        android:hint="Resumo: "
+        android:paddingTop="16dp"/>
+
+</LinearLayout>

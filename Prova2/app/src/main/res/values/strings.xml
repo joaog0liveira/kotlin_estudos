@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Prova2</string>
+
+
+    <string-array name="bancos">
+        <item>Banco do Brasil</item>
+        <item>Caixa Econômica Federal</item>
+        <item>Bradesco</item>
+        <item>Itaú</item>
+        <item>Santander</item>
+    </string-array>
+
+    <string-array name="tipos_conta">
+        <item>Conta Corrente</item>
+        <item>Conta Poupança</item>
+    </string-array>
+
+
+</resources>
